@@ -51,7 +51,9 @@ set number relativenumber
 if has("autocmd")
     augroup templates
         autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
+        autocmd BufNewFile *.h 0r ~/.vim/templates/skeleton.h
         autocmd BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
+        autocmd BufNewFile Makefile 0r ~/.vim/templates/Makefile
     augroup END
 endif
 
