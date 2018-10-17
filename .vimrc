@@ -26,8 +26,7 @@ au BufRead,BufNewFile *.py
 au BufRead,BufNewFile *.c
     \ set ts=4 |
     \ set shiftwidth=4 |
-    \ set autoindent |
-    \ set smartindent |
+    \ set cindent |
     \ set expandtab
 "Latex
 au BufRead,BufNewFile *.tex
