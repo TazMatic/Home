@@ -1,3 +1,6 @@
+"to setup first clone the vundle repo
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"then launch vim and enter :PluginInstall
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -27,15 +30,15 @@ au BufRead,BufNewFile *.c
     \ set ts=4 |
     \ set shiftwidth=4 |
     \ set cindent |
-    \ set expandtab
+    \ set noexpandtab
 "Latex
-au BufRead,BufNewFile *.tex
+au BufRead,BufNewFile silent! *.tex
 
 " FLAG WHITESPACE
 let python_highlight_all=1
 syntax on
 highlight BadWhitespace ctermbg=red guibg=darkred
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h
+au BufRead,BufNewFile silent! *.py,*.pyw,*.c,*.h
 match BadWhitespace /\s\+$/
 " UTF-8
 set encoding=utf-8
