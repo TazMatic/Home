@@ -1,6 +1,3 @@
-"to setup first clone the vundle repo
-" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-"then launch vim and enter :PluginInstall
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -31,9 +28,11 @@ au BufRead,BufNewFile *.c
     \ set shiftwidth=4 |
     \ set cindent |
     \ set noexpandtab
-"Latex
-au BufRead,BufNewFile silent! *.tex
-
+"Makefile
+au BufRead,BufNewFile Makefile
+    \ set ts=4 |
+    \ set shiftwidth=4 |
+    \ set noexpandtab
 " FLAG WHITESPACE
 let python_highlight_all=1
 syntax on

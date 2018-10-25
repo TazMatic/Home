@@ -1,8 +1,10 @@
+.DEFAULT_GOAL := <Binary name>
 CFLAGS += -Wall -Wextra -Wpedantic
 
 
-#main: main.o header.o
+money_improved: <Binary name>.o <includes>.o
+
+.PHONY:clean
 
 clean:
-       $(RM) *.o
-
+	$(RM) *.o <Binary name>
