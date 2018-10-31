@@ -1,7 +1,7 @@
 TARGET = [target exe]
 INCLUDES = [all .o that you need]
 .DEFAULT_GOAL := $(TARGET)
-CFLAGS += -Wall -Wextra -Wpedantic -Wfloat-equal -Wwrite-strings
+CFLAGS += -Wall -Wextra -Wpedantic -Wfloat-equal -Wwrite-strings -Wvla
 
 
 $(TARGET): $(INCLUDES)
