@@ -1,10 +1,21 @@
-.DEFAULT_GOAL := <Binary name>
-CFLAGS += -Wall -Wextra -Wpedantic
+TARGET = [target exe]
+INCLUDES = [all .o that you need]
+.DEFAULT_GOAL := $(TARGET)
+CFLAGS += -Wall -Wextra -Wpedantic -Wfloat-equal -Wwrite-strings
 
 
-money_improved: <Binary name>.o <includes>.o
+$(TARGET): $(INCLUDES)
 
-.PHONY:clean
+.PHONY:clean debug
+
+
+%.debug:CFLAGS += -g
+%.debug: %
+	@#
+
+debug: CFLAGS += -g
+debug: $(TARGET)
 
 clean:
-	$(RM) *.o <Binary name>
+	$(RM) *.o $(TARGET)
+
