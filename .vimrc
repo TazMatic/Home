@@ -22,12 +22,12 @@ au BufRead,BufNewFile *.py
    \ set expandtab |
    \ set autoindent |
    \ set fileformat=unix
-"C
+"C Geany
 au BufRead,BufNewFile *.c
     \ set ts=4 |
     \ set shiftwidth=4 |
     \ set cindent |
-    \ set noexpandtab
+    \ set expandtab
 "Makefile
 au BufRead,BufNewFile Makefile
     \ set ts=4 |
@@ -51,6 +51,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 set number relativenumber
 if has("autocmd")
     augroup templates
+        autocmd BufNewFile test.c 0r ~/.vim/templates/test.c
         autocmd BufNewFile *.c 0r ~/.vim/templates/skeleton.c
         autocmd BufNewFile *.h 0r ~/.vim/templates/skeleton.h
         autocmd BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
